@@ -43,14 +43,17 @@ INSERT INTO Parts VALUES
 GO
 
 
-SELECT * FROM Parts WHERE Price > 100
+SELECT * FROM Parts
+WHERE Price > 100
 GO
 
-SELECT * FROM Parts WHERE CateID LIKE 'CPU'
+SELECT * FROM Parts
+WHERE CateID LIKE 'CPU'
 GO
 
 CREATE VIEW V_Parts AS
-SELECT PartID, PartName, Price, Quantity FROM Categories JOIN Parts on Categories.CateID = Parts.CateID
+SELECT PartID, PartName, Price, Quantity FROM Categories
+JOIN Parts on Categories.CateID = Parts.CateID
 GO
 
 CREATE VIEW V_TopParts AS
