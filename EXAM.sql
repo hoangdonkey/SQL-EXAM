@@ -54,7 +54,7 @@ GO
 
 CREATE VIEW V_Parts AS
 SELECT PartID, PartName, Price, Quantity FROM Categories
-JOIN Parts on Categories.CateID = Parts.CateID
+JOIN Parts ON Categories.CateID = Parts.CateID
 GO
 
 CREATE VIEW V_TopParts AS
