@@ -48,7 +48,8 @@ WHERE Price > 100
 GO
 
 SELECT * FROM Parts
-WHERE CateID LIKE 'CPU'
+JOIN Categories ON Categories.CateID = Parts.CateID
+WHERE CateName LIKE 'CPU'
 GO
 
 CREATE VIEW V_Parts AS
